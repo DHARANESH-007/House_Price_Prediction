@@ -20,9 +20,9 @@ from xgboost import XGBRegressor
 import mlflow
 import mlflow.xgboost
 
-DEFAULT_TRAIN = Path("data/processed/feature_engineered_train.csv")
-DEFAULT_EVAL = Path("data/processed/feature_engineered_eval.csv")
-DEFAULT_OUT = Path("models/xgb_best_model.pkl")
+DEFAULT_TRAIN = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\data\\processed\\feature_engineered_train.csv")
+DEFAULT_EVAL = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\data\\processed\\feature_engineered_eval.csv")
+DEFAULT_OUT = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\models\\xgb_best_model.pkl")
 
 
 def _maybe_sample(df: pd.DataFrame, sample_frac: Optional[float], random_state: int) -> pd.DataFrame:
@@ -63,7 +63,9 @@ def tune_model(
 ) -> Tuple[Dict, Dict]:
     """Run Optuna tuning; save best model; return (best_params, best_metrics)."""
     if tracking_uri:
-        mlflow.set_tracking_uri(tracking_uri)
+        tracking_path = Path(tracking_uri).resolve()
+        tracking_path.mkdir(parents=True, exist_ok=True)
+        mlflow.set_tracking_uri(tracking_path.as_uri())
     mlflow.set_experiment(experiment_name)
 
     X_train, y_train, X_eval, y_eval = _load_data(train_path, eval_path, sample_frac, random_state)

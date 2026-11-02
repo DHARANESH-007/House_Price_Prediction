@@ -12,8 +12,8 @@ import pandas as pd
 from category_encoders import TargetEncoder
 from joblib import dump #joblib.dump saves encoders/mappings to disk (important for reusing at inference).
 
-PROCESSED_DIR = Path("data/processed")
-MODELS_DIR = Path("models")
+PROCESSED_DIR = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\data\\processed")
+MODELS_DIR = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\models")
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
 

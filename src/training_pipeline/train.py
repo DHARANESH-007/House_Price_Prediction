@@ -16,9 +16,9 @@ from joblib import dump
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from xgboost import XGBRegressor
 
-DEFAULT_TRAIN = Path("data/processed/feature_engineered_train.csv")
-DEFAULT_EVAL = Path("data/processed/feature_engineered_eval.csv")
-DEFAULT_OUT = Path("models/xgb_model.pkl")
+DEFAULT_TRAIN = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\data\\processed\\feature_engineered_train.csv")
+DEFAULT_EVAL = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\data\\processed\\feature_engineered_eval.csv")
+DEFAULT_OUT = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\models\\xgb_model.pkl")
 
 
 def _maybe_sample(df: pd.DataFrame, sample_frac: Optional[float], random_state: int) -> pd.DataFrame:

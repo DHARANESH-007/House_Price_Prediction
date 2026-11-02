@@ -21,8 +21,8 @@ import re
 from pathlib import Path
 import pandas as pd
 
-RAW_DIR = Path("data/raw")
-PROCESSED_DIR = Path("data/processed")
+RAW_DIR = Path("C:\\Users\\dhara\\OneDDrive\\Desktop\\House_Prediction\\data\\raw")
+PROCESSED_DIR = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\data\\processed")
 PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
 
 # Manual fixes for known mismatches (normalized form)

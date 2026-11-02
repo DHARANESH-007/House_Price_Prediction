@@ -8,11 +8,11 @@ Load & time-split the raw dataset.
 import pandas as pd
 from pathlib import Path
 
-DATA_DIR = Path("data/raw")
+DATA_DIR = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\data\\raw")
 
 
 def load_and_split_data(
-    raw_path: str = "data/raw/untouched_raw_original.csv",
+    raw_path: str = "C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\data\\raw\\HouseTS.csv",
     output_dir: Path | str = DATA_DIR,
 ):
     """Load raw dataset, split into train/eval/holdout by date, and save to output_dir."""

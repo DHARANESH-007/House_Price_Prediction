@@ -11,8 +11,8 @@ import pandas as pd
 from joblib import load
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
-DEFAULT_EVAL = Path("data/processed/feature_engineered_eval.csv")
-DEFAULT_MODEL = Path("models/xgb_model.pkl")
+DEFAULT_EVAL = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\data\\processed\\feature_engineered_eval.csv")
+DEFAULT_MODEL = Path("C:\\Users\\dhara\\OneDrive\\Desktop\\House_Prediction\\models\\xgb_model.pkl")
 
 
 def _maybe_sample(df: pd.DataFrame, sample_frac: Optional[float], random_state: int) -> pd.DataFrame:
